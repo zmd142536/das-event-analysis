@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+Thumbs.db
+outputs/
+data/raw/
+data/preprocessed/
+data/catalogs/*.csv.gz
