@@ -1,0 +1,76 @@
+{
+  "experiment": "S2_no_crack",
+  "h5_input_dir": "data/raw/S2",
+  "h5_dataset": "/default",
+  "h5_summary": {
+    "file_count": 71,
+    "first_file": "S2_20250719-090002.471108350+0800.h5",
+    "first_time": "2025-07-19T09:00:02.471108350",
+    "last_file": "S2_20250719-204000.780883829+0800.h5",
+    "last_time": "2025-07-19T20:40:00.780883829",
+    "dataset": "/default",
+    "samples_per_file": 3000000,
+    "channel_count": 501,
+    "sampling_rate_hz": 5000.0,
+    "gauge_length_m": 1.6,
+    "channel_spacing_m": 0.2,
+    "start_layout_channel": 3000,
+    "end_layout_channel": 3500
+  },
+  "data_channel_mapping": "data_channel = layout_channel - H5 start_channel (3000)",
+  "target_channel_count": 380,
+  "control_channel_count": 18,
+  "analysis_start": "2025-07-19T09:00:02.471108350",
+  "macro_observation": "2025-07-19T20:37:47",
+  "analysis_end": "2025-07-19T20:40:00",
+  "candidate_feature_safe_end": "2025-07-19T20:39:59",
+  "reference_safe_end": "2025-07-19T20:37:46",
+  "candidate_policy": "Keep candidate events through 20:40; label events at/after macro_observation as post_macro, never precursory.",
+  "reference_policy": "Use only pre-macro reference windows; do not let post-20:37:47 data enter calibration or KNN reference domains.",
+  "recommended_reference_branches": {
+    "baseline": [
+      "initial_rain_background",
+      "early_hydraulic_background",
+      "stable_hydraulic_background",
+      "routine_personnel",
+      "pipe_repair_personnel",
+      "pipe_burst_flow",
+      "mixed_personnel_pumping"
+    ],
+    "conservative": [
+      "initial_rain_background",
+      "early_hydraulic_background",
+      "stable_hydraulic_background",
+      "routine_personnel",
+      "pipe_repair_personnel",
+      "pipe_burst_flow",
+      "mixed_personnel_pumping",
+      "early_rain_candidate_transients"
+    ]
+  },
+  "reference_subclass_counts": {
+    "initial_rain_background": 80,
+    "early_hydraulic_background": 80,
+    "stable_hydraulic_background": 80,
+    "routine_personnel": 60,
+    "pipe_repair_personnel": 60,
+    "pipe_burst_flow": 120,
+    "mixed_personnel_pumping": 60
+  },
+  "s1_parent_domain_counts": {
+    "stable_rain": 240,
+    "personnel": 120,
+    "pumping": 180
+  },
+  "hard_exclusion_only": [
+    "mixed_personnel_scanner_pumping"
+  ],
+  "manual_actions_before_full_run": [
+    "Visually check representative connection-channel waveforms before retaining them as controls.",
+    "Check the three stage-balanced rainfall-background windows against video/RMS before using them as references.",
+    "Extend the original screening code so calibration and all reference tasks are limited by reference_safe_end.",
+    "Include recurring mixed_personnel_pumping as a capped episode-balanced reference subclass.",
+    "Keep the single mixed_personnel_scanner_pumping episode as a hard exclusion only.",
+    "Keep the S1 pooled per-scale KNN model and unified leave-one-out threshold unchanged."
+  ]
+}

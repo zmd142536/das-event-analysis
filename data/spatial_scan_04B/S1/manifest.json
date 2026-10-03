@@ -1,0 +1,108 @@
+{
+  "analysis": "Near-surface multiscale merged-event-frequency spatial organization scan",
+  "settings": {
+    "simulations": 5000,
+    "seed": 20260922,
+    "scan_step_seconds": 60,
+    "window_minutes": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      30,
+      60
+    ],
+    "radius_cm": 35.0,
+    "min_merged_event_records": 5,
+    "min_active_nodes": 3,
+    "alpha": 0.05,
+    "family_size": 3,
+    "batch_size": 200
+  },
+  "experiment": {
+    "name": "S1",
+    "coordinate_file": "data/coordinates/S1_coordinates.xlsx",
+    "event_file": "data/events/S1_event_activity_04B_effective_plus_uncertain.csv",
+    "start": "2025-07-07 14:06:54",
+    "end": "2025-07-07 22:38:39",
+    "event_set": "effective_plus_uncertain"
+  },
+  "effective_seed": 20260923,
+  "script_sha256": "57ffda4160c0e36f51b2fc8616b668e56cc6363bda9e9248914ae9bc79162d36",
+  "inputs": {
+    "coordinates_sha256": "10c32a0175746235259fb7a6395e983e98a3ca8567118a0cc9e06a7cac7a5877",
+    "events_sha256": "60d8940eb8d307d4519dfbb4e36d666aad9dc1e07b686951af0bd7c435c2ec66"
+  },
+  "graph": {
+    "rule": "symmetric binary 3-D radius graph; no added edges",
+    "radius_cm": 35.0,
+    "nodes": 112,
+    "edges": 764,
+    "isolated_nodes": 0,
+    "component_sizes": [
+      112
+    ],
+    "edges_with_shared_geometric_gauge_support": 200,
+    "interpretation": "Statistical organization of node-level observations; shared DAS measurement support is audited, not asserted independent."
+  },
+  "event_audit": {
+    "source_rows": 4613,
+    "excluded_before": 0,
+    "excluded_after": 75,
+    "in_time_rows": 4538,
+    "excluded_outside_domain": 4,
+    "selected_raw_records": 4534,
+    "merged_local_records": 2824,
+    "records_removed_by_same_node_overlap": 1710,
+    "merged_components_larger_than_one": 732,
+    "largest_component_source_records": 25,
+    "longest_merged_interval_seconds": 4.325,
+    "selected_records_with_crossing_gauge": 2,
+    "selected_records_with_unlocated_gauge": 2,
+    "layout_channel_minus_data_channel": 3000,
+    "counting_rule": "One local record per connected overlapping interval at the same coordinate node; count at the peak of its largest-activity source record. No amplitude summation.",
+    "remaining_scope": "Cross-node duplicate/source equivalence and measurement-support independence are not assumed resolved."
+  },
+  "summary": {
+    "experiment": "S1",
+    "main_variable": "window_count_of_merged_local_event_records",
+    "event_set": "effective_plus_uncertain",
+    "selected_nodes": 112,
+    "edges": 764,
+    "selected_raw_records": 4534,
+    "merged_local_records": 2824,
+    "fixed_node_record_fraction": 0.030807365439093484,
+    "scan_candidates": 3463,
+    "eligible_candidates": 2108,
+    "simulations": 5000,
+    "global_p_scan": 0.1219756048790242,
+    "global_p_study": 0.1219756048790242,
+    "evidence_status": "not_detected",
+    "detected_episode_groups": 0,
+    "critical_max_z_study": 4.740533733476172,
+    "strongest_start": "2025-07-07 22:31:54",
+    "strongest_end": "2025-07-07 22:36:54",
+    "strongest_duration_minutes": 5.0,
+    "strongest_moran_i": 0.15662525070980354,
+    "strongest_null_mean": 0.03953607876846153,
+    "strongest_delta_moran_i": 0.11708917194134201,
+    "strongest_scan_z": 4.050200345741154
+  },
+  "assumptions": [
+    "Whole histories are exchangeable within geometry/stratum/gauge-opportunity groups under the null.",
+    "This conditional reference does not prove independent DAS measurement support or exclude all coupling/response biases.",
+    "The ROI and scan settings were specified after earlier exploratory analyses; this is a retrospective analysis.",
+    "Time-window support and aggregated spatial association do not establish physical transition times, propagation, damage coalescence or predictive lead time."
+  ],
+  "definitions": {
+    "main_variable": "Per-node count of merged local event records whose representative peak falls within the scan window; every record has weight 1 and activity amplitude is not summed.",
+    "window": "[start,end), except that an end equal to the fixed analysis cutoff includes records exactly at that cutoff.",
+    "eligibility": "At least 5 merged local event records, at least 3 active nodes and nonzero spatial count variance.",
+    "graph_weight": "1 for 0<3D distance<=35 cm (or configured radius), else 0; no self edges",
+    "moran": "n/E * sum_(unordered graph edges)(x_i-xbar)(x_j-xbar) / sum_i(x_i-xbar)^2",
+    "scan": "Standardize each eligible window symmetrically across observed and randomized fields; maximum over every scanned duration and start time.",
+    "p": "(1 + number of randomized scan maxima >= observed score)/(B+1); Holm across planned 3 experiments.",
+    "episodes": "Overlapping significant scan windows grouped; strongest corrected-significant window is the representative. Union bounds are descriptive, not true continuous-state boundaries."
+  }
+}

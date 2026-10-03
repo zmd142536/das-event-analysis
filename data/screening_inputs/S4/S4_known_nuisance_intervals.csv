@@ -1,0 +1,27 @@
+start_time,end_time,kind,buffer_s,hard_exclude,note
+2025-08-11 09:07:00,2025-08-11 09:07:10,personnel,20,True,"Personnel went outside; duration was undocumented, so a short point interval is used."
+2025-08-11 10:00:16,2025-08-11 10:04:16,mixed_personnel_pumping,30,True,Gauge reading and pumping.
+2025-08-11 11:00:26,2025-08-11 11:03:00,mixed_personnel_pumping,30,True,Gauge reading and pumping.
+2025-08-11 11:03:00,2025-08-11 11:19:18,rain_impact,5,True,Continuous audible raindrop impacts on soil.
+2025-08-11 11:11:16,2025-08-11 11:11:18,personnel,15,True,About two seconds of walking.
+2025-08-11 11:25:48,2025-08-11 11:33:18,rain_impact,5,True,Rapid continuous raindrop impacts on soil.
+2025-08-11 12:00:38,2025-08-11 13:03:59,mixed_personnel_pumping,30,True,Pumping with personnel activity.
+2025-08-11 13:38:00,2025-08-11 13:44:46,mixed_personnel_pumping,30,True,Personnel walking and pumping.
+2025-08-11 14:01:00,2025-08-11 14:03:46,pumping,30,True,Pumping.
+2025-08-11 15:01:00,2025-08-11 15:05:03,pumping,30,True,Pumping.
+2025-08-11 15:08:00,2025-08-11 15:15:00,children_voice,15,True,Children speaking/noise nearby.
+2025-08-11 15:26:31,2025-08-11 15:28:17,mixed_pumping_vehicle,30,True,Pumping with a passing vendor vehicle.
+2025-08-11 15:45:00,2025-08-11 16:00:19,children_voice,15,True,Group of children speaking and moving nearby.
+2025-08-11 16:00:00,2025-08-11 16:00:39,personnel,15,True,Personnel walking.
+2025-08-11 16:00:19,2025-08-11 16:05:25,pumping,30,True,Pumping.
+2025-08-11 16:07:28,2025-08-11 16:08:29,children_voice,15,True,Group of children speaking nearby.
+2025-08-11 16:17:10,2025-08-11 16:17:46,tractor,30,True,Slow tractor pass.
+2025-08-11 16:19:50,2025-08-11 16:20:01,vehicle_horn,30,True,Fast truck pass with horn.
+2025-08-11 16:40:42,2025-08-11 16:49:29,personnel,15,True,Personnel speaking and walking.
+2025-08-11 16:59:24,2025-08-11 16:59:58,personnel,15,True,Personnel walking.
+2025-08-11 16:59:55,2025-08-11 17:03:37,scanner,30,True,3-D laser scanner mechanical noise.
+2025-08-11 17:34:28,2025-08-11 17:34:54,metal_impact,20,True,Intermittent metal collision sounds.
+2025-08-11 18:00:23,2025-08-11 18:00:43,personnel,15,True,Personnel speaking and walking.
+2025-08-11 18:00:43,2025-08-11 18:04:26,scanner_vehicle,30,True,3-D scanner noise with a passing vehicle.
+2025-08-11 18:09:38,2025-08-11 18:09:52,vendor_loudspeaker,30,True,Vendor horn/announcement.
+2025-08-11 18:22:50,2025-08-11 18:22:59,vehicle_horn,30,True,Passing vehicle with horn.

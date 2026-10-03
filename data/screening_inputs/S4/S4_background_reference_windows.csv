@@ -1,0 +1,3 @@
+reference_class,start_time,end_time,eligible_for_calibration,note
+early_hydraulic_background,2025-08-11 08:20:00,2025-08-11 08:55:00,True,S4 dry pre-rain background; legacy internal class name retained for S1/S2 refiner compatibility.
+stable_hydraulic_background,2025-08-11 09:10:00,2025-08-11 09:55:00,True,Stable early-rain background after the 09:07 personnel activity and before the 10:00 operation.

@@ -1,0 +1,167 @@
+{
+  "experiment": "S4_two_cracks_high_rainfall",
+  "h5_input_dir": "data/raw/S4",
+  "h5_dataset": "/default",
+  "h5_summary": {
+    "file_count": 70,
+    "first_file": "S4_20250811-085821.285570803+0800.h5",
+    "first_time": "2025-08-11T08:58:21.285570803",
+    "last_file": "S4_20250811-202820.531994313+0800.h5",
+    "last_time": "2025-08-11T20:28:20.531994313",
+    "dataset": "/default",
+    "samples_per_file": 3000000,
+    "channel_count": 501,
+    "sampling_rate_hz": 5000.0,
+    "gauge_length_m": 1.6,
+    "channel_spacing_m": 0.2,
+    "start_layout_channel": 3000,
+    "end_layout_channel": 3500,
+    "metadata_source": "verified_from_s4_h5_headers"
+  },
+  "data_channel_mapping": "data_channel = layout_channel - H5 start_channel (3000)",
+  "target_channel_count": 380,
+  "control_channel_count": 18,
+  "analysis_start": "2025-08-11T08:58:21.285570803",
+  "rain_start": "2025-08-11T09:00:00",
+  "first_visible_erosion": "2025-08-11T13:49:40",
+  "local_slump_signs": "2025-08-11T20:23:42",
+  "first_visible_local_sliding": "2025-08-11T20:28:46",
+  "macro_observation": "2025-08-11T20:29:07",
+  "macro_transition_end": "2025-08-11T20:29:24",
+  "analysis_end": "2025-08-11T20:30:00",
+  "candidate_feature_safe_end": "2025-08-11T20:29:59",
+  "reference_safe_end": "2025-08-11T20:28:45",
+  "reference_counts": {
+    "stable_rain": 240,
+    "personnel": 180,
+    "pumping": 240
+  },
+  "balanced_reference_sampling": {
+    "strategy": "actual_subtype_quota_then_within_class_redistribution",
+    "allow_replacement_only_if_total_unique_times_are_insufficient": true,
+    "families": {
+      "stable_rain": [
+        {
+          "family": "stable_early_rain",
+          "quota": 240,
+          "reference_classes": [
+            "stable_hydraulic_background"
+          ]
+        }
+      ],
+      "personnel": [
+        {
+          "family": "adult_personnel",
+          "quota": 90,
+          "kinds": [
+            "personnel"
+          ]
+        },
+        {
+          "family": "children_voice",
+          "quota": 90,
+          "kinds": [
+            "children_voice"
+          ]
+        }
+      ],
+      "pumping": [
+        {
+          "family": "pumping_and_mixed_operation",
+          "quota": 80,
+          "kinds": [
+            "pumping",
+            "mixed_personnel_pumping",
+            "mixed_pumping_vehicle"
+          ]
+        },
+        {
+          "family": "rain_impact",
+          "quota": 60,
+          "kinds": [
+            "rain_impact"
+          ]
+        },
+        {
+          "family": "vehicle_and_loudspeaker",
+          "quota": 40,
+          "kinds": [
+            "tractor",
+            "vehicle_horn",
+            "vendor_loudspeaker"
+          ]
+        },
+        {
+          "family": "scanner_mechanical",
+          "quota": 40,
+          "kinds": [
+            "scanner",
+            "scanner_vehicle"
+          ]
+        },
+        {
+          "family": "metal_impact",
+          "quota": 20,
+          "kinds": [
+            "metal_impact"
+          ]
+        }
+      ]
+    }
+  },
+  "noise_type_to_algorithm_class": {
+    "personnel": "personnel",
+    "children_voice": "personnel",
+    "pumping": "pumping",
+    "mixed_personnel_pumping": "pumping",
+    "rain_impact": "pumping",
+    "mixed_pumping_vehicle": "pumping",
+    "tractor": "pumping",
+    "vehicle_horn": "pumping",
+    "scanner": "pumping",
+    "metal_impact": "pumping",
+    "scanner_vehicle": "pumping",
+    "vendor_loudspeaker": "pumping"
+  },
+  "algorithm_noise_interface": {
+    "personnel": "Human walking, speech and children activity.",
+    "pumping": "Internal compatibility label for pumping and other documented non-human mechanical/acoustic nuisance types."
+  },
+  "candidate_policy": "Retain candidates through 20:30. Only peaks before 20:28:46 may be called precursory; 20:28:46--20:29:24 is a visible macro-transition interval.",
+  "reference_policy": "Calibration/reference tasks must end before 20:28:46 and exclude every documented nuisance interval plus its row-specific buffer.",
+  "documented_failure_sequence": [
+    {
+      "time": "2025-08-11T13:49:40",
+      "observation": "Toe-middle surface began to wash away."
+    },
+    {
+      "time": "2025-08-11T16:47:00",
+      "observation": "Toe-left erosion became visible."
+    },
+    {
+      "time": "2025-08-11T17:20:00",
+      "observation": "Toe-middle erosion began and progressively expanded."
+    },
+    {
+      "time": "2025-08-11T20:23:42",
+      "observation": "Local slump signs appeared at the middle crest."
+    },
+    {
+      "time": "2025-08-11T20:28:46",
+      "observation": "Lower block first showed visible sliding."
+    },
+    {
+      "time": "2025-08-11T20:29:07",
+      "observation": "Large local block entered slow-to-accelerating sliding."
+    },
+    {
+      "time": "2025-08-11T20:29:24",
+      "observation": "Documented large local slump completed."
+    }
+  ],
+  "manual_actions_before_full_run": [
+    "Rerun this generator with --require-h5 on the machine holding the raw S4 H5 files.",
+    "Check representative dry and stable-rain reference waveforms before accepting calibration.",
+    "Keep the detailed nuisance kind for reporting; use only its explicit algorithm-class mapping inside the unchanged S2 refiner."
+  ]
+}

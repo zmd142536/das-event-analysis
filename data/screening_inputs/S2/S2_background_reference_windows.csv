@@ -1,0 +1,4 @@
+reference_class,start_time,end_time,eligible_for_calibration,note
+initial_rain_background,2025-07-19 09:00:02.471108350,2025-07-19 09:30:00,True,Initial rainfall background; experiment and rainfall both start at 09:00; S1-equivalent first-30-min window.
+early_hydraulic_background,2025-07-19 10:14:00,2025-07-19 10:44:00,True,Rainfall background after pipe repair; retained as a separate reference stage.
+stable_hydraulic_background,2025-07-19 10:44:00,2025-07-19 11:19:40,True,Stable pre-first-erosion rainfall background; retained as a separate reference stage.
