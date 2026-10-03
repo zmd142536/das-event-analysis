@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "settings": {
+    "simulations": 5000,
+    "seed": 20260922,
+    "scan_step_seconds": 60,
+    "window_minutes": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      30,
+      60
+    ],
+    "radius_cm": 35.0,
+    "min_merged_event_records": 5,
+    "min_active_nodes": 3,
+    "alpha": 0.05,
+    "family_size": 3,
+    "batch_size": 200
+  },
+  "experiments": [
+    "S1",
+    "S2",
+    "S4"
+  ],
+  "elapsed_seconds": 28.403337999945506
+}
