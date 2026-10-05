@@ -4,8 +4,7 @@ message: If you use these data or code, please cite this release using the versi
 type: dataset
 title: Data and code for DAS event analysis in experiments S1, S2, and S4
 authors:
-- family-names: Zhao
-  given-names: Mingdong
+- name: Lanzhou University
 version: 1.0.0
 doi: 10.5281/zenodo.23124753
 repository-code: https://github.com/zmd142536/das-event-analysis

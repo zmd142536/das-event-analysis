@@ -72,7 +72,7 @@ The spatial reference permutes entire node histories within the specified geomet
 
 `SHA256SUMS.txt` lists public-file checksums. `docs/data_integrity.json` records row counts, fields and privacy sanitation checks. `docs/code_integrity.json` records the calculation-function comparison against the supplied code. `docs/validation_summary.json` records the checks performed. Original analysis fingerprints are retained separately from the checksums of the public files.
 
-Citation metadata for version 1.0.0 are supplied in `CITATION.cff`. The currently declared creator is Mingdong Zhao. Cite the version-specific Zenodo DOI [10.5281/zenodo.23124753](https://doi.org/10.5281/zenodo.23124753). This DOI is registered when the Zenodo record is published. The code repository is [https://github.com/zmd142536/das-event-analysis](https://github.com/zmd142536/das-event-analysis).
+Citation metadata for version 1.0.0 are supplied in `CITATION.cff`. The creator of this release is Lanzhou University. Cite the version-specific Zenodo DOI [10.5281/zenodo.23124753](https://doi.org/10.5281/zenodo.23124753). This release is archived on Zenodo. The code repository is [https://github.com/zmd142536/das-event-analysis](https://github.com/zmd142536/das-event-analysis).
 
 ## Licenses
 
