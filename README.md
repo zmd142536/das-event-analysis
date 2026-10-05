@@ -72,4 +72,13 @@ The spatial reference permutes entire node histories within the specified geomet
 
 `SHA256SUMS.txt` lists public-file checksums. `docs/data_integrity.json` records row counts, fields and privacy sanitation checks. `docs/code_integrity.json` records the calculation-function comparison against the supplied code. `docs/validation_summary.json` records the checks performed. Original analysis fingerprints are retained separately from the checksums of the public files.
 
-The creators, repository URL, DOI, publication reference and licenses are supplied by the authors when publishing the release. Cite the final version-specific Zenodo DOI. License selection for code and data is recorded at publication; this prepared package does not assign an unconfirmed license.
+Citation metadata for version 1.0.0 are supplied in `CITATION.cff`. The currently declared creator is Mingdong Zhao. Cite the version-specific Zenodo DOI [10.5281/zenodo.23124753](https://doi.org/10.5281/zenodo.23124753). This DOI is registered when the Zenodo record is published. The code repository is [https://github.com/zmd142536/das-event-analysis](https://github.com/zmd142536/das-event-analysis).
+
+## Licenses
+
+The Python source code under `scripts/` and `tests/`, including the readable embedded-source mirrors, is licensed under the MIT License; see `LICENSE`.
+
+The data under `data/` and the documentation, including `docs/`, this README, `CITATION.cff` and the upload guide, are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0); see `LICENSE-DATA.txt` and the [license terms](https://creativecommons.org/licenses/by/4.0/legalcode).
+
+These licenses apply to their respective components. Third-party dependencies retain their own licenses.
+

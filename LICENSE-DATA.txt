@@ -1,0 +1,14 @@
+Data and documentation license
+
+Copyright (c) 2026 The Authors
+
+The data under data/ and the documentation, including docs/, README.md,
+CITATION.cff and README_UPLOAD.txt, are licensed under the Creative Commons
+Attribution 4.0 International Public License (CC BY 4.0).
+
+The full license terms are available at:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribution should identify the creators listed in CITATION.cff and cite the
+version-specific Zenodo DOI for this release. Python source code under scripts/
+and tests/ has a separate MIT license; see LICENSE and README.md.
